@@ -82,6 +82,15 @@
     (if (> i k) 0
         (/ (n i) (+ (d i) (iter (+ i 1)) ) ) )
     )
+  (trace iter)
+  (/ 1 (iter 1))
+)
+
+(define (cont-frac-recursive n d k)
+  (define (iter i)
+    (if (> i k) 0
+        (/ (n i) (+ (d i) (iter (+ i 1)) ) ) )
+    )
   (/ 1 (iter 1))
 )
 

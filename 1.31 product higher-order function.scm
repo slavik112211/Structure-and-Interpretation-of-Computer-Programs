@@ -23,7 +23,7 @@
     (if (> a b)
         result
         (iter (next a) (* result (term a)) )))
-  ; (trace iter)
+  (trace iter)
   (iter a 1 ))
 
 (define (func x) (* 3 x))
@@ -33,8 +33,8 @@
 
 ; (product func 2 inc 6)
 
-(define (factorial x) (product identity 1 inc x))
-; (factorial 5)
+(define (factorial x) (product_iterative identity 1 inc x))
+(factorial 5)
 
 
 ; Also use product to compute approximations to Pi using the formula by John Wallis
